@@ -6,8 +6,10 @@ import { RpsContext } from 'rpscript-interface';
 
 m.describe('botmaster-telegram', () => {
 
-  m.it('should convert to html', async function () {
-    // let md = new RPSModule;
+  m.it('should init telegram botmaster', async function () {
+    let ctx = new RpsContext
+    ctx.addModuleContext('botmaster-telegram',{token:'TOKEN',webhookEndpoint:'/endoint'});
+    let md = new RPSModule(ctx);
 
     // let output = await md.botmaster-telegram(new RpsContext,{},"Hello *World*!");
 
